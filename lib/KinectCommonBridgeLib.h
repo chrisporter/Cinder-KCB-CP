@@ -53,9 +53,13 @@ See the Apache 2 License for the specific language governing permissions and lim
 #endif //_WIN32
 
 
-typedef int KCBHANDLE;
+#ifndef __KCB_HANDLE__
+#define __KCB_HANDLE__
 
-#define KCB_INVALID_HANDLE    0xffffffff
+typedef int KCBHANDLE;
+static const int KCB_INVALID_HANDLE = 0xffffffff;
+
+#endif
 #define KINECT_MAX_PORTID_LENGTH    50
 
 
